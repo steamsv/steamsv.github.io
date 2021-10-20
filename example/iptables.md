@@ -10,4 +10,4 @@ iptables -t nat -A OUTPUT -p udp -m udp --dport 53 -j DNAT --to-destination DNS
 
 配合adguard home DNS必须设置成tcp，如下
 
-![](<../.gitbook/assets/image (7).png>)
+![](https://www.nicoimg.com/file/nicoimg/tcpdns.png)
