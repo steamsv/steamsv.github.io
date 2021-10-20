@@ -1,8 +1,5 @@
----
-description: yuanli
----
 
-# DNS解锁原理介绍
+## DNS解锁原理介绍
 
 ### DNS作用
 
