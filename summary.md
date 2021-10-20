@@ -4,7 +4,12 @@
   * [DNS解锁原理介绍](principle.md)
   * [服务条款](tos.md)
   * [提问的智慧](two.md)
+  * [流媒体规则](rule.md)
 * 示例
   * [使用Adguard Home](example/adguardhome.md)
   * [使用dnsmasq](example/dnsmasq.md)
   * 等等其它工具
+* 部分用到的软件工具
+  * [iptables](appdoc/iptablesdoc.md)
+  * [Adguard Home](/appdocadguardhomedoc.md)
+  * [dnsmasq](appdoc/dnsmasqdoc.md)
