@@ -1,8 +1,8 @@
-# adguardhome教程
+### adguardhome教程
 
 ![AdGuard Home](https://cdn.adguard.com/public/Adguard/Common/adguard\_home.svg)
 
-### 为您和您的设备提供隐私保护中心
+#### 为您和您的设备提供隐私保护中心
 
 &#x20;免费开源，强大的全网广告和跟踪阻止DNS服务器。.
 
@@ -17,7 +17,7 @@
 
 它作为一个DNS服务器运行，将跟踪域重新路由到“黑洞”，从而阻止您的设备连接到这些服务器。它基于我们为我们的公共[AdGuard DNS](https://adguard.com/en/adguard-dns/overview.html)服务器使用的软件-两者共享许多通用代码。
 
-## 入门 <a href="getting-started" id="getting-started"></a>
+#### 入门 <a href="getting-started" id="getting-started"></a>
 
 请阅读我们Wiki上的 [**Getting Started**](https://github.com/AdguardTeam/AdGuardHome/wiki/Getting-Started) 文章，了解如何安装AdGuard Home，以及如何配置设备以使用它。
 
@@ -25,7 +25,7 @@ I如果您运行的是 **Linux**, 有一种安全且简单的方法来安装AdGu
 
 或者，您可以使用我们的 [official Docker image](https://hub.docker.com/r/adguard/adguardhome) 镜像。
 
-### 指南
+#### 指南
 
 * [配置](https://github.com/AdguardTeam/AdGuardHome/wiki/Configuration)
 * [AdGuard Home作为HTTPS上的DNS或TLS服务器上的DNS](https://github.com/AdguardTeam/AdGuardHome/wiki/Encryption)
@@ -35,7 +35,7 @@ I如果您运行的是 **Linux**, 有一种安全且简单的方法来安装AdGu
 
 
 
-## VPS上面安装
+#### VPS上面安装
 
 要在VPS上运行AdGuard Home，您需要一台VPS服务，这里以centos7x64系统为例。
 
@@ -67,7 +67,7 @@ pwd
 
 运行 `./AdGuardHome -s install` 将AdGuard Home安装为系统服务.
 
-## 通过浏览器继续安装
+#### 通过浏览器继续安装
 
 默认端口为 3000 访问 — `http://ip:3000/`
 
@@ -101,23 +101,11 @@ Aliases:
 ......
 ```
 
-## 配置设备以使用AdGuard Home
+#### 配置设备以使用AdGuard Home
 
-现在，一旦确定AdGuard Home可以在VPS上运行，就可以通过更改系统DNS设置以使用VPS的公共IP地址在计算机上使用它。
+现在，一旦确定AdGuard Home可以在VPS上运行，就可以通过更改系统DNS设置以使用VPS的公共IP地址或内网IP地址在计算机上使用它。
 
 注意：某些IDC的服务器使用adguard home 默认DNS会出现部分问题，可记录系统初始DNS修改为即可
 
-## 代理服务端使用Adguard home <a href="acknowledgments" id="acknowledgments"></a>
 
-注意:首先你要知道代理服务端使用的是内置DNS还是系统DNS，前者优先
-
-1.不论你的代理服务端使用的是哪个DNS，首先修改系统DNS为`127.0.0.1`
-
-备注:系统DNS配置路径`/etc/resolv.conf`
-
-注意:部分IDC服务商试用Adguard home 默认DNS会出问题，务必备份初始DNS，以便出问题时设定。
-
-2.设置——DNS设置——DNS服务设定  勾选禁用IPv6
-
-3.然后重启代理服务端
 
