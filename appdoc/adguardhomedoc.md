@@ -1,22 +1,5 @@
 ### adguardhome教程
 
-![AdGuard Home](https://cdn.adguard.com/public/Adguard/Common/adguard\_home.svg)
-
-#### 为您和您的设备提供隐私保护中心
-
-&#x20;免费开源，强大的全网广告和跟踪阻止DNS服务器。.
-
-&#x20;[AdGuard.com](https://adguard.com) | [Wiki](https://github.com/AdguardTeam/AdGuardHome/wiki) | [Reddit](https://reddit.com/r/Adguard) | [Twitter](https://twitter.com/AdGuard) | [Telegram](https://t.me/adguard\_en)\
-\
-&#x20;[![Code Coverage](https://img.shields.io/codecov/c/github/AdguardTeam/AdGuardHome/master.svg)](https://codecov.io/github/AdguardTeam/AdGuardHome?branch=master) [![Go Report Card](https://goreportcard.com/badge/github.com/AdguardTeam/AdGuardHome)](https://goreportcard.com/report/AdguardTeam/AdGuardHome) [![GolangCI](https://golangci.com/badges/github.com/AdguardTeam/AdGuardHome.svg)](https://golangci.com/r/github.com/AdguardTeam/AdGuardHome)\
-&#x20;[![Latest release](https://img.shields.io/github/release/AdguardTeam/AdGuardHome/all.svg)](https://github.com/AdguardTeam/AdGuardHome/releases) [![adguard-home](https://snapcraft.io/adguard-home/badge.svg)](https://snapcraft.io/adguard-home) [![Docker Pulls](https://img.shields.io/docker/pulls/adguard/adguardhome.svg?maxAge=604800)](https://hub.docker.com/r/adguard/adguardhome) [![Docker Stars](https://img.shields.io/docker/stars/adguard/adguardhome.svg?maxAge=604800)](https://hub.docker.com/r/adguard/adguardhome)
-
-![](https://cdn.adguard.com/public/Adguard/Common/adguard\_home.gif)
-
-&#x20;AdGuard Home是一个全网络的阻止广告和跟踪的软件。设置完成后，它将覆盖所有家庭设备，而您不需要任何客户端软件。
-
-它作为一个DNS服务器运行，将跟踪域重新路由到“黑洞”，从而阻止您的设备连接到这些服务器。它基于我们为我们的公共[AdGuard DNS](https://adguard.com/en/adguard-dns/overview.html)服务器使用的软件-两者共享许多通用代码。
-
 #### 入门 <a href="getting-started" id="getting-started"></a>
 
 请阅读我们Wiki上的 [**Getting Started**](https://github.com/AdguardTeam/AdGuardHome/wiki/Getting-Started) 文章，了解如何安装AdGuard Home，以及如何配置设备以使用它。
@@ -73,15 +56,23 @@ pwd
 
 ip为您的VPS对外的公网IP，按照实际需求自行配置
 
-![此选项无意义 直接点击下一步](<../../.gitbook/assets/image (6).png>)
 
 这是您可能需要控制服务的其他命令。
 
-* `AdGuardHome -s uninstall` - 卸载AdGuard Home服务。
-* `AdGuardHome -s start` - 启动服务。
-* `AdGuardHome -s stop` - 停止服务。
-* `AdGuardHome -s restart` - 重新启动服务。
-* `AdGuardHome -s status` - 显示当前服务状态。
+```
+./AdGuardHome -s uninstall  //卸载AdGuard Home服务。
+./AdGuardHome -s start  //启动服务。
+./AdGuardHome -s stop  //停止服务。
+./AdGuardHome -s restart  //重新启动服务。
+./AdGuardHome -s status  //显示当前服务状态。
+及
+systemctl start AdGuardHome  //启动
+systemctl restart AdGuardHome  //重启
+systemctl status AdGuardHome  //查看状态
+systemctl enable AdGuardHome  //开机启动
+systemctl disable AdGuardHome  //开机禁用
+```
+
 
 
 
