@@ -12,8 +12,10 @@ yum install -y dnsmasq
 
 配置示例
 
+```
 server=8.8.8.8  //可多行 主DNS
 server=/baidu.com/1.1.1.1  //域名 `baidu.com` 及其子域名都由 `1.1.1.1` 来解析
+```
 
 #### 控制命令
 
