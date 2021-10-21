@@ -2,17 +2,33 @@
 
 #### 安装
 
+
+
 ```
-server=8.8.8.8
-server=8.8.4.4
-server=/netflix.com/dns
-server=/netflix.net/dns
-server=/nflximg.net/dns
-server=/nflximg.com/dns
-server=/nflxvideo.net/dns
-server=/nflxso.net/dns
-server=/nflxext.com/dns
+yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum install bind-utils
+yum install -y dnsmasq
 ```
 
-DNS自行替换成产品面板上显示的DNS IP
+#### 主配置文件位于 `/etc/dnsmasq.d` 目录下
+
+配置示例
+
+```
+server=8.8.8.8  //可多行 主DNS
+server=/baidu.com/1.1.1.1  //域名 `baidu.com` 及其子域名都由 `1.1.1.1` 来解析
+```
+
+#### 控制命令
+
+```
+systemctl start dnsmasq  //启动
+systemctl restart dnsmasq  //重启
+systemctl status dnsmasq  //查看状态
+systemctl enable dnsmasq  //开机启动
+systemctl disable dnsmasq  //开机禁用
+```
+
+
+
 
