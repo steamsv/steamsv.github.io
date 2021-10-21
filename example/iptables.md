@@ -1,6 +1,5 @@
-# iptables劫持DNS（最佳方案）
+# iptables劫持DNS
 
-## 自备环境
 
 ```
 iptables -t nat -A OUTPUT -p udp -m udp --dport 53 -j DNAT --to-destination DNS
