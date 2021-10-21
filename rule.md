@@ -2,7 +2,7 @@
 description: 有需要增加的TG联系 @steamsv
 ---
 
-# 流媒体规则及区域解锁项目
+### 流媒体规则及区域解锁项目
 
 github: [https://github.com/steamsv/streamrule](https://github.com/steamsv/streamrule) 规则过多可配合脚本处理，如有遗漏可通过issues提交，香港台湾可补充规则issues提交，注意标题格式（地区-遗漏/补充-流媒体）
 
