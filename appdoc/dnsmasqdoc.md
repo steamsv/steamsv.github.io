@@ -10,7 +10,9 @@ yum install bind-utils
 yum install -y dnsmasq
 ```
 
-#### 主配置文件位于 `/etc/dnsmasq.d` 目录下
+#### 主配置文件
+
+位于 `/etc/dnsmasq.d ` 目录下，以 `.conf ` 结尾
 
 配置示例
 
