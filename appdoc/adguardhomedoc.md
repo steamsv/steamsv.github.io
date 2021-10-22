@@ -1,5 +1,3 @@
-### adguardhome教程
-
 #### 入门 <a href="getting-started" id="getting-started"></a>
 
 请阅读我们Wiki上的 [**Getting Started**](https://github.com/AdguardTeam/AdGuardHome/wiki/Getting-Started) 文章，了解如何安装AdGuard Home，以及如何配置设备以使用它。
