@@ -1,5 +1,6 @@
 <!-- _sidebar.md -->
-* [STEAMSV](README.md)
+* STEAMSV
+  * [](README.md)
 * 重要必阅
   * [DNS解锁原理介绍](principle.md)
   * [快速开始](quickstart.md)
