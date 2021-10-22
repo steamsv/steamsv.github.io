@@ -8,11 +8,9 @@
   * [提问的智慧](two.md)
   * [流媒体规则](rule.md)
 * 第三方DNS工具
-  * [iptables](appdoc/iptablesdoc.md)
-    * [使用iptables](example/iptables.md)
-  * [Adguard Home](/appdoc/adguardhomedoc.md)
-    * [使用Adguard Home](example/adguardhome.md)
-  * [dnsmasq](appdoc/dnsmasqdoc.md)
-    * [使用dnsmasq](example/dnsmasq.md)
-* 服务器状态
-  *
+  * [iptables教程](appdoc/iptablesdoc.md)
+    * [VPS使用iptables](example/iptables.md)
+  * [Adguard Home教程](/appdoc/adguardhomedoc.md)
+    * [VPS使用Adguard Home](example/adguardhome.md)
+  * [dnsmasq教程](appdoc/dnsmasqdoc.md)
+    * [VPS使用dnsmasq](example/dnsmasq.md
