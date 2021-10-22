@@ -9,8 +9,8 @@
   * [流媒体规则](rule.md)
 * 第三方DNS工具
   * [iptables教程](appdoc/iptablesdoc.md)
-    * [VPS使用iptables](example/iptables.md)
+  * [VPS使用iptables](example/iptables.md)
   * [Adguard Home教程](/appdoc/adguardhomedoc.md)
-    * [VPS使用Adguard Home](example/adguardhome.md)
+  * [VPS使用Adguard Home](example/adguardhome.md)
   * [dnsmasq教程](appdoc/dnsmasqdoc.md)
-    * [VPS使用dnsmasq](example/dnsmasq.md
+  * [VPS使用dnsmasq](example/dnsmasq.md
