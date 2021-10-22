@@ -1,6 +1,20 @@
-### 流媒体规则及区域解锁项目
+## 已提供区域
+  - 香港
+  - 台湾
+  - 日本
+  - 美国
 
-github: [https://github.com/steamsv/streamrule](https://github.com/steamsv/streamrule) 规则过多可配合脚本处理，如有遗漏可通过issues提交，香港台湾可补充规则issues提交，注意标题格式（地区-补充-流媒体）
+## 保证区域
+  - 香港
+  - 台湾
+
+## 节点流媒体调整规则
+  - JP1 日本、TW1 台湾 由IDC 负责流媒体调整，入口静态IP
+  - HK1 香港、TW2 台湾 由定时任务(10分钟)自动检测并自动更换IP，并更新DDNS
+
+## 流媒体规则
+
+github: [https://github.com/steamsv/streamrule](https://github.com/steamsv/streamrule) 如有遗漏可通过issues提交，香港台湾可[补充规则](https://github.com/steamsv/streamrule/issues)提交，注意标题格式（地区-补充-流媒体）
 
 ```
 #netflix
