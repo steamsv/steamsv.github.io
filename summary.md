@@ -14,3 +14,5 @@
     * [使用Adguard Home](example/adguardhome.md)
   * [dnsmasq](appdoc/dnsmasqdoc.md)
     * [使用dnsmasq](example/dnsmasq.md)
+* 服务器状态
+  *
