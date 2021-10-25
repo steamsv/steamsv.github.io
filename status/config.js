@@ -24,16 +24,8 @@ window.Config = {
   // 导航栏菜单
   Navi: [
     {
-      text: '项目主页',
-      url: 'https://github.com/geekyouth/uptime-status'
-    },
-    {
-      text: 'GitHub',
-      url: 'https://github.com/geekyouth/'
-    },
-    {
-      text: '博客',
-      url: 'https://java666.cn'
+      text: '文档首页',
+      url: 'https://docs.dnsunlock.com/'
     }
   ]
 };

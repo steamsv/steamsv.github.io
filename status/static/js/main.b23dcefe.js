@@ -7237,7 +7237,7 @@
                             text: "UptimeRobot"
                         })
                         , " 接口制作，检测频率 5 分钟")
-                    , o.a.createElement("p", null, "本站构建于 2020-04-08"
+                    , o.a.createElement("p", null, "本站构建于 2021-10-25"
                         //     , o.a.createElement(l, {
                         //     to: "https://status.org.cn/",
                         //     text: "STATUS.ORG.CN"
