@@ -13,5 +13,3 @@
     * [VPS使用iptables](example/iptables.md)
   * [Adguard Home教程](/appdoc/adguardhomedoc.md)
     * [VPS使用Adguard Home](example/adguardhome.md)
-  * [dnsmasq教程](appdoc/dnsmasqdoc.md)
-    * [VPS使用dnsmasq](example/dnsmasq.md)
