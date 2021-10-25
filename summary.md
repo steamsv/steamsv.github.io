@@ -6,7 +6,6 @@
   * [快速开始](quickstart.md)
   * [服务条款](tos.md)
   * [提问的智慧](two.md)
-  * [帮解锁规则](help.md)
   * [流媒体规则](rule.md)
 * 第三方DNS工具
   * [iptables教程](appdoc/iptablesdoc.md)
