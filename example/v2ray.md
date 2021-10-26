@@ -10,9 +10,7 @@
 #### 安装adguard home跟iptables并设定
 
   * [Adguard Home教程](/appdoc/adguardhomedoc.md)
-  * [VPS使用Adguard Home](example/adguardhome.md)
   * [iptables教程](appdoc/iptablesdoc.md)
-  * [VPS使用iptables](example/iptables.md)
 
 
 ### 第二步 装v2ray
