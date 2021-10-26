@@ -97,4 +97,18 @@ Aliases:
 注意：某些IDC的服务器使用adguard home 默认DNS会出现部分问题，可记录系统初始DNS修改为即可
 
 
+### 实现DNS重定向
+
+自行理解其运行方式，举一反三。
+
+#### 1.DNS重写
+
+过滤器——DNS重写
+
+![](https://www.nicoimg.com/file/nicoimg/dnscx.png)
+
+#### 2.自定义规则
+
+过滤器——自定义规则
+![](https://www.nicoimg.com/file/nicoimg/zdygz.png)
 
