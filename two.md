@@ -57,7 +57,7 @@ Copyleft 2001 by D.H.Grand(nOBODY/Ginux), 2010 by Gasolin, 2015 by Ryan Wu
   * [处理无礼的回应](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh\_CN.md#%E5%A4%84%E7%90%86%E6%97%A0%E7%A4%BC%E7%9A%84%E5%9B%9E%E5%BA%94)
 * [如何避免扮演失败者](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh\_CN.md#%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E6%89%AE%E6%BC%94%E5%A4%B1%E8%B4%A5%E8%80%85)
 * [不该问的问题](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh\_CN.md#%E4%B8%8D%E8%AF%A5%E9%97%AE%E7%9A%84%E9%97%AE%E9%A2%98)
-* [好问题与蠢问题](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh\_CN.md#%E5%A5%BD%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A0%A2%E9%97%AE%E9%A2%98)
+* [好问题与蠢问题](?id=好问题与蠢问题)
 * [如果得不到回答](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh\_CN.md#%E5%A6%82%E6%9E%9C%E5%BE%97%E4%B8%8D%E5%88%B0%E5%9B%9E%E7%AD%94)
 * [如何更好地回答问题](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh\_CN.md#%E5%A6%82%E4%BD%95%E6%9B%B4%E5%A5%BD%E5%9C%B0%E5%9B%9E%E7%AD%94%E9%97%AE%E9%A2%98)
 * [相关资源](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh\_CN.md#%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90)
