@@ -119,6 +119,8 @@ Aliases:
 
 #### 示例 推荐此方法
 
+- 重定向规则及其子域至香港 sniproxy ip （hk1.dnsunlock.com 为其DDNS）
+
 ```
 #netflix
 ||netflix.ca^$dnsrewrite=hk1.dnsunlock.com
