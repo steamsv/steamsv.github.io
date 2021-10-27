@@ -24,7 +24,7 @@ yum install bind-utils -y
 To download AdGuard Home and unpack it execute following commands:
 
 ```bash
-wget https://static.adguard.com/adguardhome/release/AdGuardHome_linux_amd64.tar.gz
+yum install wget -y && wget https://static.adguard.com/adguardhome/release/AdGuardHome_linux_amd64.tar.gz
 tar xvf AdGuardHome_linux_amd64.tar.gz
 ```
 
