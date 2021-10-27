@@ -15,7 +15,8 @@ systemctl enable iptables  #开机启动
 
 #### 配合Adguard home 推荐此
 
-- 已安装好Adguard home并设定了上游DNS为TCP方式(最后面有截图)，不需要修改系统DNS
+- 自行安装好Adguard home并设定了上游DNS为TCP方式(最后面有截图)，不需要修改系统DNS
+- 然后执行以下命令
 
 ```
 #劫持出网访问53端口的所有UDP流量到Adguard home
