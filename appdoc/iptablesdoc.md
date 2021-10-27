@@ -30,7 +30,10 @@ service iptables save
 - DNS 替换成产品面板提供的DNS IP
 
 ```
+#劫持出网访问53端口的所有UDP流量到指定DNS
 iptables -t nat -A OUTPUT -p udp -m udp --dport 53 -j DNAT --to-destination DNS
+#保存规则
+service iptables save 
 ```
 
 ### 第三步 开放端口并保存规则
