@@ -17,11 +17,7 @@ yum install bind-utils -y
 
 ### 第二步 下载并安装
 
-- 转到 [AdGuard Home page](https://github.com/AdguardTeam/AdGuardHome#installation) 并下载适用于您的体系结构的二进制文件（在此示例中为64位Linux）。
-
-要下载AdGuard Home并解压缩它，请执行以下命令：
-
-To download AdGuard Home and unpack it execute following commands:
+- 下载AdGuard Home并解压缩它，请执行以下命令：
 
 ```bash
 yum install wget -y && wget https://static.adguard.com/adguardhome/release/AdGuardHome_linux_amd64.tar.gz
