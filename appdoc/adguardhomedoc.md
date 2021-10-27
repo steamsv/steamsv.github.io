@@ -1,5 +1,6 @@
 ## 入门 <a href="getting-started" id="getting-started"></a>
 
+- 以vultr centos7 为例
 - 以下所有命令 均在VPS的ssh窗口执行
 
 
