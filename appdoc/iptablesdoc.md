@@ -13,7 +13,7 @@ systemctl enable iptables  #开机启动
 
 ### 第二步 写入规则并保存
 
-#### 配合Adguard home
+#### 配合Adguard home 推荐此
 
 - 已安装好Adguard home并设定了上游DNS为TCP方式(最后面有截图)，不需要修改系统DNS
 
