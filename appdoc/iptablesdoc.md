@@ -1,9 +1,9 @@
-### 完整步骤 
+## 完整步骤 
 
- - 以vultr centos7 为例，已安装好Adguard home并设定了上游DNS为TCP方式(最后面有截图)，不需要修改系统DNS
+ - 以vultr centos7 为例
  - 以下命令均在ssh窗口执行 root权限
 
- #### 第一步 安装iptables并启动设置开机自启
+### 第一步 安装iptables并启动设置开机自启
 
 ```
 yum install iptables-services -y  #安装iptables
@@ -11,7 +11,11 @@ systemctl start iptables  #启动
 systemctl enable iptables  #开机启动
 ```
 
-#### 第二步 写入规则并保存
+### 第二步 写入规则并保存
+
+#### 配合Adguard home
+
+- 已安装好Adguard home并设定了上游DNS为TCP方式(最后面有截图)，不需要修改系统DNS
 
 ```
 #劫持出网访问53端口的所有UDP流量到Adguard home
@@ -20,7 +24,15 @@ iptables -t nat -A OUTPUT -p udp -m udp --dport 53 -j DNAT --to-destination 127.
 service iptables save 
 ```
 
-#### 第三步 开放端口并保存规则
+#### 或不使用Adguard home
+
+- DNS 替换成产品面板提供的DNS IP
+
+```
+iptables -t nat -A OUTPUT -p udp -m udp --dport 53 -j DNAT --to-destination DNS
+```
+
+### 第三步 开放端口并保存规则
 
 ```
 #下列命令中4代表插入第四行，原行下移，22端口在第四行，注意顺序不要乱，顺序为优先级
@@ -30,12 +42,12 @@ iptables -I INPUT 4 -p udp -m udp --dport 8080 -j ACCEPT  #开启8080 udp端口
 service iptables save
 ```
 
-#### 如还是无法解锁
+### 如还是无法解锁
 
 - 检查代理服务端是否有https DNS
 
 
-### 以下可能用到的命令示例
+## 以下可能用到的命令示例
 
 iptables防火墙与其它防火墙不能共存，自行检查是否有其它，有则需要停止并开机禁用
 
@@ -78,7 +90,7 @@ iptables -t nat -A OUTPUT -p udp -m udp --dport 53 -j DNAT --to-destination 127.
 
 ```
 
-### iptables劫持DNS
+## iptables劫持DNS
 
 
 ```
@@ -87,7 +99,7 @@ iptables -t nat -A OUTPUT -p udp -m udp --dport 53 -j DNAT --to-destination DNS
 
 以上命令作用是劫持53UDP流量至指定地址，DNS为变量自行替换，可配合Adguard home使用效果更好
 
-#### 配合本地adguard home 上游DNS必须设置成tcp
+### 配合本地adguard home 上游DNS必须设置成tcp
 
 如下
 
