@@ -12,6 +12,8 @@
   * [Adguard Home教程](/appdoc/adguardhomedoc.md)
   * [iptables教程](appdoc/iptablesdoc.md)
 
+确定规则设定完成
+
 
 ### 第二步 装v2ray
 
