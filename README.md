@@ -15,4 +15,5 @@ DNS解锁服务 可以帮助你的设备获得流媒体接入权限。不同于 
 - 配合第三方DNS工具[Adguard Home](appdoc/adguardhomedoc.md)，实现高效解析
 - 支持 IP/DDNS授权
 - 多地区随意切换，香港、台湾、日本、等等，可查看流媒体状态[流媒体状态](rule.md)
+- 本站所有教程基于vultr centos7，其它自行百度谷歌，介意勿买
 
