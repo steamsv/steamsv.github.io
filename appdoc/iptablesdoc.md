@@ -1,6 +1,6 @@
 ### 完整步骤 
 
- - 以vultr centos7 为例，已安装好Adguard home并设定了上游DNS为TCP方式，不需要修改系统DNS
+ - 以vultr centos7 为例，已安装好Adguard home并设定了上游DNS为TCP方式(最后面有截图)，不需要修改系统DNS
  - 以下命令均在ssh窗口执行 root权限
 
  #### 第一步 安装iptables并启动设置开机自启
@@ -30,7 +30,12 @@ iptables -I INPUT 4 -p udp -m udp --dport 8080 -j ACCEPT  #开启8080 udp端口
 service iptables save
 ```
 
-### 相关命令
+#### 如还是无法解锁
+
+- 检查代理服务端是否有https DNS
+
+
+### 以下可能用到的命令示例
 
 iptables防火墙与其它防火墙不能共存，自行检查是否有其它，有则需要停止并开机禁用
 
