@@ -1,19 +1,6 @@
 ## 入门 <a href="getting-started" id="getting-started"></a>
 
-请阅读我们Wiki上的 [**Getting Started**](https://github.com/AdguardTeam/AdGuardHome/wiki/Getting-Started) 文章，了解如何安装AdGuard Home，以及如何配置设备以使用它。
-
-I如果您运行的是 **Linux**, 有一种安全且简单的方法来安装AdGuard Home—您可以从 [Snap Store](https://snapcraft.io/adguard-home)获得它。
-
-或者，您可以使用我们的 [official Docker image](https://hub.docker.com/r/adguard/adguardhome) 镜像。
-
-## 指南
-
-* [配置](https://github.com/AdguardTeam/AdGuardHome/wiki/Configuration)
-* [AdGuard Home作为HTTPS上的DNS或TLS服务器上的DNS](https://github.com/AdguardTeam/AdGuardHome/wiki/Encryption)
-* [如何在Raspberry Pi上安装和运行AdGuard Home](https://github.com/AdguardTeam/AdGuardHome/wiki/Raspberry-Pi)
-* [如何在虚拟专用服务器上安装和运行AdGuard Home](https://github.com/AdguardTeam/AdGuardHome/wiki/VPS)
-* [如何正确编写自己的主机阻止列表](https://github.com/AdguardTeam/AdGuardHome/wiki/Hosts-Blocklists)
-
+- 以下所有命令 均在VPS的ssh窗口执行
 
 
 ## VPS上面安装
@@ -83,7 +70,7 @@ systemctl disable AdGuardHome  //开机禁用
 nslookup google.com 127.0.0.1
 ```
 
-如果一切正常，您将获得以下输出：
+如果一切正常，您将获得以下返回：
 
 ```
 Using domain server:

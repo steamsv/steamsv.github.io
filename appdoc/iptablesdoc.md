@@ -1,7 +1,7 @@
 ## 完整步骤 
 
  - 以vultr centos7 为例
- - 以下命令均在ssh窗口执行 root权限
+ - 以下所有命令 均在VPS的ssh窗口执行
 
 ### 第一步 安装iptables并启动设置开机自启
 
