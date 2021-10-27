@@ -25,7 +25,7 @@ I如果您运行的是 **Linux**, 有一种安全且简单的方法来安装AdGu
 首先，让我们确保您的VPS具有必要的最低要求，以root身份运行此命令：
 
 ```bash
-yum install bind-utils
+yum install bind-utils -y
 ```
 
 转到 [AdGuard Home page](https://github.com/AdguardTeam/AdGuardHome#installation) 并下载适用于您的体系结构的二进制文件（在此示例中为64位Linux）。

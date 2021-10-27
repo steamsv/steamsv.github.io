@@ -1,9 +1,41 @@
+### 完整步骤 
+
+ - 以vultr centos7 为例，已安装好Adguard home并设定了上游DNS为TCP方式，不需要修改系统DNS
+ - 以下命令均在ssh窗口执行 root权限
+
+ #### 第一步 安装iptables并启动设置开机自启
+
+```
+yum install iptables-services -y  #安装iptables
+systemctl start iptables  #启动
+systemctl enable iptables  #开机启动
+```
+
+#### 第二步 写入规则并保存
+
+```
+#劫持出网访问53端口的所有UDP流量到Adguard home
+iptables -t nat -A OUTPUT -p udp -m udp --dport 53 -j DNAT --to-destination 127.0.0.1
+#保存规则
+service iptables save 
+```
+
+#### 第三步 开放端口并保存规则
+
+```
+#下列命令中4代表插入第四行，原行下移，22端口在第四行，注意顺序不要乱，顺序为优先级
+iptables -I INPUT 4 -p tcp -m tcp --dport 8080 -j ACCEPT #开启8080 tcp端口
+iptables -I INPUT 4 -p udp -m udp --dport 8080 -j ACCEPT  #开启8080 udp端口
+#保存规则
+service iptables save
+```
+
 ### 相关命令
 
 iptables防火墙与其它防火墙不能共存，自行检查是否有其它，有则需要停止并开机禁用
 
 ```
-yum install iptables-services -y //安装iptables
+yum install iptables-services -y #安装iptables
 //常用命令
 systemctl status iptables  #状态
 systemctl start iptables  #启动
