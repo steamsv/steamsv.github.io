@@ -6,7 +6,8 @@
 
 ## VPS上面安装
 
-要在VPS上运行AdGuard Home，您需要一台VPS服务，这里以centos7x64系统为例。
+- 要在VPS上运行AdGuard Home，您需要一台VPS服务，这里以centos7x64系统为例。
+- [视频教程](https://www.youtube.com/watch?v=nwbVA6j8kSE)
 
 ### 第一步 安装调试工具
 
