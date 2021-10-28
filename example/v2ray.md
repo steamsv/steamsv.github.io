@@ -1,11 +1,12 @@
 ## 基于v2ray的完整示例 百分百解锁
 
 - 这里以vultr centos7x64系统为例
+- 第一步跟第二步可颠倒
 
   * adguard home
   * iptables
 
-### 第一步 环境部署
+### 第一步 环境部署 
 
 #### 安装adguard home跟iptables并设定
 
