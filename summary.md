@@ -12,5 +12,5 @@
   * [iptables教程](appdoc/iptablesdoc.md)
   * [Adguard Home教程](/appdoc/adguardhomedoc.md)
   * [dnsmasq教程](/appdoc/dnsmasqdoc.md)
-* 步骤示例
+* v2ray完整教程
   * [v2ray](example/v2ray.md)
