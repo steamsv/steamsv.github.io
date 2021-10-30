@@ -3,8 +3,13 @@
 - 这里以vultr centos7x64系统为例
 - 第一步跟第二步可颠倒
 
-  * adguard home
-  * iptables
+### 校验授权是否正确
+
+```
+curl http://hk1.dnsunlock.com:9527/ip
+```
+
+- 正确返回 `IP Whitelist` 错误返回 `IP Blacklist`
 
 ### 第一步 环境部署 
 
@@ -115,7 +120,7 @@
         }
     ],
     "routing": {
-        "domainStrategy": "AsIs",
+        "domainStrategy": "UseIP",
         "rules": [
             {
                 "type": "field",
@@ -137,18 +142,10 @@
 ```
 
 - 修改一下
-  * 删除了第四行的 "https://dns-unfiltered.adguard.com/dns-query"
-  * 仔细思考下为什么删除它
+  * 删除DNS模块
 
 ```
 {
-    "dns": {
-        "servers": [
-            "1.1.1.1",
-            "8.8.8.8",
-            "localhost"
-        ]
-    },
     "inbounds": [
         {
             "port": 64622,
