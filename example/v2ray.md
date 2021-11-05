@@ -19,7 +19,7 @@ curl http://hk1.dnsunlock.com:9527/ip
 
   * 自行百度怎么关闭
 
-### 第二步 docker
+### 第二步 安装docker
 
 ```
 yum install -y yum-utils

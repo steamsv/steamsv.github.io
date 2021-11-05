@@ -10,5 +10,5 @@
 * 第三方DNS工具
   * [iptables教程](appdoc/iptablesdoc.md)
   * [Adguard Home教程](/appdoc/adguardhomedoc.md)
-* v2ray完整教程
-  * [v2ray](example/v2ray.md)
+* v2ray及xray完整教程
+  * [v2ray及xray](example/v2ray.md)
