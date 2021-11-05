@@ -13,21 +13,28 @@ curl http://hk1.dnsunlock.com:9527/ip
 
 - 正确返回 `IP Whitelist` 错误返回 `IP Blacklist`
 
-### 第一步 环境部署 
+### 第一步 关闭防火墙
 
-#### 安装adguard home跟iptables并设定
+#### 一般为firewalld跟iptables
 
-  * [Adguard Home教程](/appdoc/adguardhomedoc.md)
-  * [iptables教程](appdoc/iptablesdoc.md)
+  * 自行百度怎么关闭
 
-确定规则设定完成
-
-
-### 第二步 装v2ray
+### 第二步 docker
 
 - 自行用你知道的方式安装
 
-#### 检查代理服务端配置
+### 第三步
+
+- 启动adguardhome容器
+
+```
+docker run -itd --network=host --privileged --restart=always dnsunlock/adguardhome:v2ray /usr/sbin/init
+```
+
+- 容器会占用 8080 8443 53 3000 端口，注意不要冲突
+- 容器内置HK1规则，管理端口`3000` 账号 `dnsunlock` 密码 `123456789`
+
+### 第四步 修改代理服务端：v2ray/xray 配置文件
  
 - 很多人难到这，不理解“代理服务端““代理客户端”是什么意思 
 
@@ -41,76 +48,55 @@ curl http://hk1.dnsunlock.com:9527/ip
   * 就是在VPS上面的v2ray的配置文件，所在位置根据不同的安装方式有所不同，注意观看官方文档
 
 
-### 代理服务端配置文件怎么检查？
+### 代理服务端配置文件修改示例
 
 - 例如 下面是一个v2ray 配置文件
 
 ```
 {
-    "dns": {
-        "servers": [
-            "https://dns-unfiltered.adguard.com/dns-query",
-            "1.1.1.1",
-            "8.8.8.8",
-            "localhost"
-        ]
-    },
-    "inbounds": [
-        {
-            "port": 64622,
-            "tag": "vmess-in",
-            "protocol": "vmess",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "a9ebb97c-0201-553d-c78d-c699bc10c91b",
-                        "alterId": 64
-                    }
-                ]
-            },
-            "streamSettings": {
-                "network": "ws",
-                "security": "none",
-                "tlsSettings": {
-                    "serverName": "",
-                    "allowInsecure": true
-                },
-                "tcpSettings": {
-                    "header": {
-                        "type": "none"
-                    }
-                },
-                "kcpSettings": {
-                    "header": {
-                        "type": "none"
-                    },
-                    "mtu": 1350,
-                    "congestion": false,
-                    "tti": 20,
-                    "uplinkCapacity": 5,
-                    "writeBufferSize": 1,
-                    "readBufferSize": 1,
-                    "downlinkCapacity": 20
-                },
-                "wsSettings": {
-                    "path": "\/v2ray\/",
-                    "connectionReuse": true
-                },
-                "httpSettings": {
-                    "path": "\/v2ray\/",
-                    "host": []
-                }
-            }
-        }
-    ],
-    "outbounds": [
-        {
-            "protocol": "freedom",
-            "settings": {
-                "domainStrategy": "UseIP"
-            },
-            "tag": "direct"
+    "inbound": {
+        "allocate": {
+            "strategy": "always"
         },
+        "listen": "0.0.0.0",
+        "port": 8090,
+        "protocol": "vmess",
+        "settings": {
+            "clients": [
+                {
+                    "id" : "fbb68c3f-2e0b-4185-8263-f58282a64ffa",
+                    "alterId" : 0
+                }
+            ],
+            "udp": true
+        },
+        "sniffing": {
+            "destOverride": [
+                "http",
+                "tls"
+            ],
+            "enabled": true
+        },
+        "streamSettings": {
+            "network": "ws",
+            "security": "auto",
+            "wsSettings": {
+                "connectionReuse": true,
+                "path": "/v2ray/"
+            }
+        },
+        "tag": "proxy"
+    },
+    "log": {
+        "access": "/var/log/v2ray/access.log",
+        "error": "/var/log/v2ray/error.log",
+        "loglevel": "warning"
+    },
+    "outbound": {
+        "protocol": "freedom",
+        "settings": {}
+    },
+    "outboundDetour": [
         {
             "protocol": "blackhole",
             "settings": {
@@ -122,21 +108,13 @@ curl http://hk1.dnsunlock.com:9527/ip
         }
     ],
     "routing": {
-        "domainStrategy": "UseIP",
         "rules": [
             {
-                "type": "field",
-                "inboundTag": [
-                    "vmess-in"
-                ],
-                "outboundTag": "direct"
-            },
-            {
-                "type": "field",
                 "ip": [
                     "geoip:private"
                 ],
-                "outboundTag": "blocked"
+                "outboundTag": "blocked",
+                "type": "field"
             }
         ]
     }
@@ -144,74 +122,72 @@ curl http://hk1.dnsunlock.com:9527/ip
 ```
 
 - 修改一下
-  * 删除DNS模块
 
 ```
 {
-    "inbounds": [
-        {
-            "port": 64622,
-            "tag": "vmess-in",
-            "protocol": "vmess",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "a9ebb97c-0201-553d-c78d-c699bc10c91b",
-                        "alterId": 64
-                    }
-                ]
-            },
-            "streamSettings": {
-                "network": "ws",
-                "security": "none",
-                "tlsSettings": {
-                    "serverName": "",
-                    "allowInsecure": true
-                },
-                "tcpSettings": {
-                    "header": {
-                        "type": "none"
-                    }
-                },
-                "kcpSettings": {
-                    "header": {
-                        "type": "none"
-                    },
-                    "mtu": 1350,
-                    "congestion": false,
-                    "tti": 20,
-                    "uplinkCapacity": 5,
-                    "writeBufferSize": 1,
-                    "readBufferSize": 1,
-                    "downlinkCapacity": 20
-                },
-                "wsSettings": {
-                    "path": "\/v2ray\/",
-                    "connectionReuse": true
-                },
-                "httpSettings": {
-                    "path": "\/v2ray\/",
-                    "host": []
+    "inbound": {
+        "allocate": {
+            "strategy": "always"
+        },
+        "listen": "0.0.0.0",
+        "port": 8090,
+        "protocol": "vmess",
+        "settings": {
+            "clients": [
+                {
+                    "id" : "fbb68c3f-2e0b-4185-8263-f58282a64ffa",
+                    "alterId" : 0
                 }
+            ],
+            "udp": true
+        },
+        "sniffing": {
+            "destOverride": [
+                "http",
+                "tls"
+            ],
+            "enabled": true
+        },
+        "streamSettings": {
+            "network": "ws",
+            "security": "auto",
+            "wsSettings": {
+                "connectionReuse": true,
+                "path": "/v2ray/"
             }
-        }
-    ],
+        },
+        "tag": "proxy"
+    },
+    "log": {
+        "access": "/var/log/v2ray/access.log",
+        "error": "/var/log/v2ray/error.log",
+        "loglevel": "warning"
+    },
+    "outbound": {
+        "protocol": "freedom",
+        "settings": {}
+    },
     "outbounds": [
         {
+            "tag": "direct",
             "protocol": "freedom",
-            "settings": {
-                "domainStrategy": "AsIs"
-            },
-            "tag": "direct"
+            "settings": {}
         },
         {
-            "protocol": "blackhole",
+            "tag": "stream-80",
+            "protocol": "freedom",
             "settings": {
-                "response": {
-                    "type": "http"
-                }
-            },
-            "tag": "blocked"
+                "domainStrategy": "AsIs",
+                "redirect": "127.0.0.1:8080"
+            }
+        },
+        {
+            "tag": "stream-443",
+            "protocol": "freedom",
+            "settings": {
+                "domainStrategy": "AsIs",
+                "redirect": "127.0.0.1:8443"
+            }
         }
     ],
     "routing": {
@@ -219,26 +195,30 @@ curl http://hk1.dnsunlock.com:9527/ip
         "rules": [
             {
                 "type": "field",
-                "inboundTag": [
-                    "vmess-in"
+                "port": 80,
+                "domain": [
+                    "geosite:netflix"
                 ],
-                "outboundTag": "direct"
+                "outboundTag": "stream-80"
             },
             {
                 "type": "field",
-                "ip": [
-                    "geoip:private"
+                "port": 443,
+                "domain": [
+                    "geosite:netflix"
                 ],
-                "outboundTag": "blocked"
+                "outboundTag": "stream-443"
             }
         ]
     }
 }
 ```
 
+- 特别注意:客户端跟服务端都要設置 sniffing ，不然无法探测到域名
+
 最后重启你的v2ray服务端，这时已经解锁成功
 
-其它服务端大同小异，自行阅读其官方文档
+其它服务端请使用adguardhome本地解析，自行阅读其官方文档
 
 
 
