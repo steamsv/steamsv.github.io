@@ -5,7 +5,7 @@
 
 ### 校验授权是否正确
 
-- VPS上执行
+- VPS上照搬执行，不需要改
 
 ```
 curl http://hk1.dnsunlock.com:9527/ip
