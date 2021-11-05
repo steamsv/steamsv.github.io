@@ -41,6 +41,7 @@ docker run -itd --network=host --privileged --restart=always dnsunlock/adguardho
 
 - 容器会占用 8080 8443 53 3000 端口，注意不要冲突
 - 容器内置HK1规则，管理端口`3000` 账号 `dnsunlock` 密码 `123456789`
+- 规则设定 （过滤器-自定义过滤规则）
 
 ### 第四步 修改代理服务端：v2ray/xray 配置文件
  
