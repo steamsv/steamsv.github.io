@@ -21,7 +21,15 @@ curl http://hk1.dnsunlock.com:9527/ip
 
 ### 第二步 docker
 
-- 自行用你知道的方式安装
+```
+yum install -y yum-utils
+yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+yum install docker-ce docker-ce-cli containerd.io -y
+systemctl start docker
+systemctl enable docker
+```
 
 ### 第三步
 
