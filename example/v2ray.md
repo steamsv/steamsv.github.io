@@ -224,7 +224,7 @@ docker run -itd --network=host --privileged --restart=always dnsunlock/adguardho
 
 - 特别注意:客户端跟服务端都要設置 sniffing ，不然无法探测到域名
 
-最后重启你的v2ray服务端，这时已经解锁成功
+最后重启你的v2ray xray服务端，这时已经解锁成功
 
 其它服务端请使用adguardhome本地解析，自行阅读其官方文档
 
