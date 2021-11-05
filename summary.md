@@ -7,10 +7,8 @@
   * [服务条款](tos.md)
   * [提问的智慧](two.md)
   * [流媒体规则](rule.md)
-  * [托管服务](hosting.md)
 * 第三方DNS工具
   * [iptables教程](appdoc/iptablesdoc.md)
   * [Adguard Home教程](/appdoc/adguardhomedoc.md)
-  * [dnsmasq教程](/appdoc/dnsmasqdoc.md)
 * v2ray完整教程
   * [v2ray](example/v2ray.md)
