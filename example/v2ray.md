@@ -131,6 +131,7 @@ docker run -itd --network=host --privileged --restart=always dnsunlock/adguardho
 ```
 
 - 修改一下
+  * 需要修改的模块为`outbounds` `routing`
 
 ```
 {
