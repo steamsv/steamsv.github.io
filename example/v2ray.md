@@ -172,6 +172,7 @@ docker run -itd --network=host --privileged --restart=always dnsunlock/adguardho
         "error": "/var/log/v2ray/error.log",
         "loglevel": "warning"
     },
+<font color=red>
     "outbound": {
         "protocol": "freedom",
         "settings": {}
@@ -220,6 +221,7 @@ docker run -itd --network=host --privileged --restart=always dnsunlock/adguardho
             }
         ]
     }
+    </font>
 }
 ```
 
