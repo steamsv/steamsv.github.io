@@ -55,7 +55,7 @@ wget https://github.com/sjlleo/netflix-verify/releases/download/2.61/nf_2.61_lin
 
 前两者不再重复，官方文档有说，这里特别说下第三个即“A使用客户端DNS”
 
-  - 当代理客户端全局模式时，发起DNS请求（向DNS 8.8.8.8 发起解析baidu.com），该请求将被透明代理到代理服务端，服务端会直接向`8.8.8.8`发起解析`baidu.com`的DNS请求，而不使用系统DNS跟内置DNS，目前大部分客户端都会出现这个情况，可以使用iptables来避免这种情况发生，注意不可劫持tcp方式的DNS解析。
+  - 当代理客户端全局模式时，发起DNS请求（向DNS 8.8.8.8 发起解析baidu.com），该请求将被透明代理到代理服务端，服务端会直接向`8.8.8.8`发起解析`baidu.com`的DNS请求，而不使用系统DNS跟内置DNS，目前大部分客户端都会出现这个情况，可以使用iptables（iptables也可配合adguardhome来进行高效解析）来避免这种情况发生，注意不可劫持tcp方式的DNS解析。
 
 ## 注意事项
 
