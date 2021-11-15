@@ -2,6 +2,7 @@
 
  - 以vultr centos7 为例
  - 以下所有命令 均在VPS的ssh窗口执行
+ - iptables规则比较复杂，不可乱动
  - [视频教程](https://www.youtube.com/watch?v=xIP0kRWWZEA)
 
 ### 第一步 安装iptables并启动设置开机自启
@@ -46,11 +47,6 @@ iptables -I INPUT 4 -p udp -m udp --dport 8080 -j ACCEPT  #开启8080 udp端口
 #保存规则
 service iptables save
 ```
-
-### 如还是无法解锁
-
-- 检查代理服务端是否有https DNS
-
 
 ## 以下可能用到的命令示例
 
