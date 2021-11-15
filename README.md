@@ -18,7 +18,7 @@
   - 台湾 x2
   - 日本 x1
 
-## 保证netflix区域
+## 高可用netflix区域
   - 香港 HK1
   - 台湾 TW1
 
