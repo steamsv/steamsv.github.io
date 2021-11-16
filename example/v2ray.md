@@ -117,6 +117,7 @@ curl http://hk1.dnsunlock.com:9527/ip
 - 修改一下
   * 需要修改的模块为`outbounds` `routing`
   * 可查看官方文档灵活应用 [官方文档](https://www.v2fly.org/config/routing.html#routingobject)
+  * 注意：“redirect” 不支持热更新，如果你指向DDNS，需要重启应用，可使用带有热更新中转的工具配合
 
 ```
 {
@@ -213,7 +214,7 @@ curl http://hk1.dnsunlock.com:9527/ip
 
 最后重启你的v2ray xray服务端，这时已经解锁成功
 
-其它服务端请使用adguardhome本地解析，自行阅读其官方文档
+其它服务端请使用DNS的方式解锁，或具备“redirect”功能也可使用此方式，自行阅读其官方文档
 
 
 
