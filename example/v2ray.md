@@ -118,6 +118,7 @@ curl http://hk1.dnsunlock.com:9527/ip
   * 需要修改的模块为`outbounds` `routing`
   * 可查看官方文档灵活应用 [官方文档](https://www.v2fly.org/config/routing.html#routingobject)
   * 注意：“redirect” 不支持热更新，如果你指向DDNS，需要重启应用，可使用带有热更新中转的工具配合
+  * `127.0.0.1` 替换成stream ip 或ddns
 
 ```
 {
@@ -174,7 +175,7 @@ curl http://hk1.dnsunlock.com:9527/ip
             "protocol": "freedom",
             "settings": {
                 "domainStrategy": "AsIs",
-                "redirect": "127.0.0.1:8080"
+                "redirect": "127.0.0.1:80"
             }
         },
         {
@@ -182,7 +183,7 @@ curl http://hk1.dnsunlock.com:9527/ip
             "protocol": "freedom",
             "settings": {
                 "domainStrategy": "AsIs",
-                "redirect": "127.0.0.1:8443"
+                "redirect": "127.0.0.1:443"
             }
         }
     ],
