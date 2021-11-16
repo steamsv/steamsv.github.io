@@ -116,6 +116,7 @@ curl http://hk1.dnsunlock.com:9527/ip
 
 - 修改一下
   * 需要修改的模块为`outbounds` `routing`
+  * 可查看官方文档灵活应用 [官方文档](https://www.v2fly.org/config/routing.html#routingobject)
 
 ```
 {
