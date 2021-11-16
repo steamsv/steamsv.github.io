@@ -103,7 +103,7 @@ Aliases:
 ||*^$dnsrewrite=hk1.dnsunlock.com
 ```
 
-- 如需分流，可指定指定规则，规则自行github搜索
+- 如需分流，可指定指定规则，规则参考[Github](https://github.com/v2fly/domain-list-community/)
 ```
 ||netflix.com^$dnsrewrite=hk1.dnsunlock.com
 ||abc.com^$dnsrewrite=hk1.dnsunlock.com
