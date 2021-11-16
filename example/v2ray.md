@@ -1,7 +1,6 @@
 ## 基于v2ray的完整示例 百分百解锁
 
 - 这里以vultr centos7x64系统为例
-- 第一步跟第二步可颠倒
 
 ### 校验授权是否正确
 
@@ -19,29 +18,14 @@ curl http://hk1.dnsunlock.com:9527/ip
 
   * 自行百度怎么关闭
 
-### 第二步 安装docker
+### 第二步 开放安全组
 
-```
-yum install -y yum-utils
-yum-config-manager \
-    --add-repo \
-    https://download.docker.com/linux/centos/docker-ce.repo
-yum install docker-ce docker-ce-cli containerd.io -y
-systemctl start docker
-systemctl enable docker
-```
+- 无则无视 有则开
 
-### 第三步
+### 第三步 安装代理服务端
 
-- 启动adguardhome容器
-
-```
-docker run -itd --network=host --privileged --restart=always dnsunlock/adguardhome:v2ray /usr/sbin/init
-```
-
-- 容器会占用 8080 8443 53 3000 端口，注意不要冲突
-- 容器内置HK1规则，管理端口`3000` 账号 `dnsunlock` 密码 `123456789`
-- 规则设定 （过滤器-自定义过滤规则）
+- 自行用你自己了解的方式安装
+- 记住配置路径
 
 ### 第四步 修改代理服务端：v2ray/xray 配置文件
  
