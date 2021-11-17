@@ -2,8 +2,8 @@
 - [入门](README.md)
 - [解锁原理介绍](principle.md)
 - [服务条款](tos.md)
-- [v2ray及xray](example/v2ray.md)
-- [其它代理工具](other.md)
+- [v2ray及xray路由方式解锁](example/v2ray.md)
+- [DNS方式解锁](other.md)
 - [iptables教程](appdoc/iptablesdoc.md)
 - [Adguard Home教程](/appdoc/adguardhomedoc.md)
 - **一些可能用到的在线工具**
