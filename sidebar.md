@@ -7,7 +7,8 @@
 - [iptables教程](appdoc/iptablesdoc.md)
 - [Adguard Home教程](/appdoc/adguardhomedoc.md)
 - **一些可能用到的在线工具**
-- [在线编辑分享json](https://www.jsontools.org/)
-- [在线去重](https://docs.dnsunlock.com/rule/)
+- [编辑分享JSON](https://www.jsontools.org/)
+- [文本去重](https://docs.dnsunlock.com/rule/)
+- [UUID生成](https://docs.dnsunlock.com/uuid/)
 - **Links**
 - [Github](https://github.com/steamsv/steamsv.github.io)
