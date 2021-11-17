@@ -59,6 +59,3 @@ wget https://github.com/sjlleo/netflix-verify/releases/download/2.61/nf_2.61_lin
 
   - 当代理客户端全局模式时，发起DNS请求（向DNS 8.8.8.8 发起解析baidu.com），该请求将被透明代理到代理服务端，服务端会直接向`8.8.8.8`发起解析`baidu.com`的DNS请求，而不使用系统DNS跟内置DNS，目前大部分客户端都会出现这个情况，可以使用iptables（iptables也可配合adguardhome来进行高效解析）来避免这种情况发生，注意不可劫持tcp方式的DNS解析。
 
-## 注意事项
-
-- 由于netflix的封锁越来越频繁，有可能你已接入成功，但还是无法看netflix全部剧集，这时可以等待自动换IP，等待大约10分钟左右，再次检查是否能播放，如果使用的VPS原netflix区跟所使用的解锁区不同，可浏览器打开netflix，确认最下方是否是你所接入的区域，或打开其它该地区流媒体
