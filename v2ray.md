@@ -203,5 +203,86 @@ curl http://hk1.dnsunlock.com:9527/ip
 
 最后重启你的v2ray xray服务端，这时已经解锁成功
 
+### 修改后的示例
 
+- 只路由netflix
 
+```
+{
+    "inbound": {
+        "allocate": {
+            "strategy": "always"
+        },
+        "listen": "0.0.0.0",
+        "port": 8090,
+        "protocol": "vmess",
+        "settings": {
+            "clients": [
+                {
+                    "id" : "fbb68c3f-2e0b-4185-8263-f58282a64ffa",
+                    "alterId" : 0
+                }
+            ],
+            "udp": true
+        },
+        "sniffing": {
+            "destOverride": [
+                "http",
+                "tls"
+            ],
+            "enabled": true
+        },
+        "streamSettings": {
+            "network": "ws",
+            "security": "auto",
+            "wsSettings": {
+                "connectionReuse": true,
+                "path": "/v2ray/"
+            }
+        },
+        "tag": "proxy"
+    },
+    "log": {
+        "access": "/var/log/v2ray/access.log",
+        "error": "/var/log/v2ray/error.log",
+        "loglevel": "warning"
+    },
+    "outbound": {
+        "protocol": "freedom",
+        "settings": {}
+    },
+    "outbounds": [
+        {
+            "tag": "direct",
+            "protocol": "freedom",
+            "settings": {}
+        },
+        {
+            "tag": "stream",
+            "sendThrough": "0.0.0.0",
+            "protocol": "socks",
+            "settings": {
+                "servers": [
+                    {
+                        "address": "hk1.dnsunlock.com",
+                        "port": 8443,
+                        "users": []
+                    }
+                ]
+            }
+        }
+    ],
+    "routing": {
+        "domainStrategy": "AsIs",
+        "rules": [
+            {
+                "type": "field",
+                "domains": [
+                    "geosite:netflix"
+                ],
+                "outboundTag": "stream"
+            }
+        ]
+    }
+}
+```
