@@ -198,7 +198,7 @@ curl http://hk1.dnsunlock.com:9527/ip
 ```
 
 
-- 如你不会修改，请使用文档左下方的`编辑分享JSON`提交你的config.json至v2ray-xray部门工单，记得注明需要解锁的区域，否则会被无视
+- 如你不会修改，请使用[编辑分享JSON](https://www.jsontools.org/)提交你的config.json至v2ray-xray部门工单，记得注明需要解锁的区域，否则会被无视
 - `"rules"`仔细参考官方文档，我们这里规则是路由全部流量，你也可以根据自己的情况进行路由
 
 最后重启你的v2ray xray服务端，这时已经解锁成功
