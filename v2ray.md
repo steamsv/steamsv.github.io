@@ -116,7 +116,7 @@ curl http://hk1.dnsunlock.com:9527/ip
 
 - 修改一下
   * 需要修改的模块为`outbound` `routing`，也可直接复制粘贴上去，注意不可重复，这里我们删除了`outboundDetour` 新增了`outbounds`修改了`outbound` `routing`
-  * 可查看官方文档灵活应用 [官方文档](https://www.v2fly.org/config/routing.html#routingobject)
+  * 可查看官方文档灵活应用 [点击此按钮查看：官方文档](https://www.v2fly.org/config/routing.html#routingobject)
   * 注意：`"address": "hk1.dnsunlock.com",` DDNS可能不支持热更新，可定时重启
 
 ```
@@ -198,7 +198,7 @@ curl http://hk1.dnsunlock.com:9527/ip
 ```
 
 
-- 如你不会修改，请使用[编辑分享JSON](https://www.jsontools.org/)提交你的config.json至v2ray-xray部门工单，记得注明需要解锁的区域，否则会被无视
+- 如你不会修改，请使用[点击此按钮使用：编辑分享JSON](https://www.jsontools.org/)提交你的config.json至v2ray-xray部门工单，记得注明需要解锁的区域，否则会被无视
 - `"rules"`仔细参考官方文档，我们这里规则是路由全部流量，你也可以根据自己的情况进行路由
 
 最后重启你的v2ray xray服务端，这时已经解锁成功
