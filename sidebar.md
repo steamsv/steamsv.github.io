@@ -2,10 +2,7 @@
 - [入门](README.md)
 - [解锁原理介绍](principle.md)
 - [服务条款](tos.md)
-- [v2ray及xray路由方式解锁](example/v2ray.md)
-- [DNS方式解锁](other.md)
-- [iptables教程](appdoc/iptablesdoc.md)
-- [Adguard Home教程](/appdoc/adguardhomedoc.md)
+- [v2ray及xray路由方式解锁](v2ray.md)
 - **一些可能用到的在线工具**
 - [编辑分享JSON](https://www.jsontools.org/)
 - [文本去重](https://docs.dnsunlock.com/rule/)

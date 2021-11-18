@@ -115,10 +115,9 @@ curl http://hk1.dnsunlock.com:9527/ip
 ```
 
 - 修改一下
-  * 需要修改的模块为`outbounds` `routing`
+  * 需要修改的模块为`outbound` `routing`，也可直接复制粘贴上去，注意不可重复，这里我们删除了`outboundDetour` 新增了`outbounds`修改了`outbound` `routing`
   * 可查看官方文档灵活应用 [官方文档](https://www.v2fly.org/config/routing.html#routingobject)
-  * 注意：“redirect” 不支持热更新，如果你指向DDNS，需要重启应用，可使用带有热更新中转的工具配合
-  * `127.0.0.1` 替换成stream ip 或ddns
+  * 注意：`"address": "hk1.dnsunlock.com",` DDNS可能不支持热更新，可定时重启
 
 ```
 {
@@ -171,19 +170,17 @@ curl http://hk1.dnsunlock.com:9527/ip
             "settings": {}
         },
         {
-            "tag": "stream-80",
-            "protocol": "freedom",
+            "tag": "stream",
+            "sendThrough": "0.0.0.0",
+            "protocol": "socks",
             "settings": {
-                "domainStrategy": "AsIs",
-                "redirect": "127.0.0.1:80"
-            }
-        },
-        {
-            "tag": "stream-443",
-            "protocol": "freedom",
-            "settings": {
-                "domainStrategy": "AsIs",
-                "redirect": "127.0.0.1:443"
+                "servers": [
+                    {
+                        "address": "hk1.dnsunlock.com",
+                        "port": 8443,
+                        "users": []
+                    }
+                ]
             }
         }
     ],
@@ -192,30 +189,17 @@ curl http://hk1.dnsunlock.com:9527/ip
         "rules": [
             {
                 "type": "field",
-                "port": 80,
-                "domain": [
-                    "geosite:netflix"
-                ],
-                "outboundTag": "stream-80"
-            },
-            {
-                "type": "field",
-                "port": 443,
-                "domain": [
-                    "geosite:netflix"
-                ],
-                "outboundTag": "stream-443"
+                "network": "tcp,udp",
+                "outboundTag": "stream"
             }
         ]
     }
 }
 ```
 
-- 特别注意:客户端跟服务端都要設置 sniffing ，不然无法探测到域名
+- `"rules"`仔细参考官方文档，我们这里规则是路由全部流量，你也可以根据自己的情况进行路由
 
 最后重启你的v2ray xray服务端，这时已经解锁成功
-
-其它服务端请使用DNS的方式解锁，或具备“redirect”功能也可使用此方式，自行阅读其官方文档
 
 
 
