@@ -5,7 +5,7 @@
 - [v2ray及xray解锁](v2ray.md)
 - [xray官方模版示例](xray.md)
 - **一些可能用到的在线工具**
-- [编辑分享JSON](https://www.jsontools.org/)
+- [在线编辑JSON](https://www.jsontools.org/)
 - [文本去重](https://docs.dnsunlock.com/rule/)
 - [UUID生成](https://docs.dnsunlock.com/uuid/)
 - **Links**
