@@ -3,7 +3,7 @@
 
 ## 开始
 
-- 注意：`"address": "hk1.dnsunlock.com",` DDNS可能不支持热更新，可定时重启
+- 注意：`"address": "hk1.dnsunlock.com",` DDNS地址可能不支持热更新，可定时重启
 - 服务端需要最新版本，`rules`用到的规则需最新版本，不然部分需要路由的没有路由过去
 - 使用分流时`inbounds`需要开启`sniffing`
 - 需要修改的模块为`outbounds` `routing`
