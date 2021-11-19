@@ -24,6 +24,8 @@ curl http://hk1.dnsunlock.com:9527/ip
 
 Stream ip相当于netflix的CDN IP，但公共的DNS不会返回这个IP，这就需要通过劫持DNS请求来实现，返回指定的Stream ip。
 
+- 目前使用80 443 标准端口，如有其它端口，请使用socks5接入
+
 ### 如何劫持？
 
 通过自建DNS的方式劫持请求，例如dnsmasq，adguardhome，hosts等等；或直接把请求发送至产品面板提供的DNS。
