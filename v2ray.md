@@ -1,15 +1,7 @@
-
-
-
-## 开始
-
-- 注意：`"address": "hk1.dnsunlock.com",` DDNS地址可能不支持热更新，可定时重启
-- 服务端需要最新版本，`rules`用到的规则需最新版本，不然部分需要路由的没有路由过去
-- 使用分流时`inbounds`需要开启`sniffing`
-- 需要修改的模块为`outbounds` `routing`
-- 官方文档 [点击此按钮查看：官方文档](https://www.v2fly.org/)
-  
 ## 示例
+
+- 注意`geosite.dat`要保持最新
+- 部分`*.dnsunlock.com`是动态IP，可能不支持热更新，可自行设置定时重载配置
 
 ### 只路由netflix
 
