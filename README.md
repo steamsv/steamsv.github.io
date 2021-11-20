@@ -16,6 +16,7 @@
 
 ## v2ray及xray相关资料
 
+- xray兼容v2ray
 - [xray](https://github.com/XTLS/Xray-core)
 - [v2ray github](https://github.com/v2fly/v2ray-core)
 - [v2ray文档1](https://www.v2fly.org/)
@@ -25,7 +26,7 @@
 
 - 提供原生SOCKS5连接 统一端口为8443，无账号密码认证
 - 支持 IP/DDNS授权，授权更新频率为1分钟
-- 本站所有教程基于vultr centos7，其它自行百度谷歌，介意勿买
+- 本站所有教程基于`vultr centos7`,`xray`，其它自行百度谷歌，介意勿买
 
 ## 已提供区域
   - 香港 x2

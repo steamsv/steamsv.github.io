@@ -48,6 +48,8 @@ systemctl disable xray
 ```
 
 ## 配置示例
+
+- 以下可直接复制使用
 ```
 {
     "inbound": {
@@ -123,7 +125,7 @@ systemctl disable xray
 }
 ```
 
-
+如需其它协议，参考[基于官方模版修改后示例](xray.md)
 
 
 
