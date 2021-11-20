@@ -6,7 +6,6 @@
 ## 校验授权是否正确
 
 - VPS上照搬执行，不需要改
-
 ```
 curl http://hk1.dnsunlock.com:9527/ip
 ```
@@ -14,11 +13,116 @@ curl http://hk1.dnsunlock.com:9527/ip
 - 正确返回 `IP Whitelist` 错误返回 `IP Blacklist`
 
 
-## SOCKS5
+## 安装v2ray及xray代理服务端
 
-- 可用两种方式接入
-  * 直接授权IP后连接，当作SOCKS5使用
-  * 通过第三方工具路由至SOCKS5(例如v2ray及xray的出站路由)，具体参考[官方文档](https://www.v2fly.org/)
+- 这里以xray为例
+- 安装
+```
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
+```
+
+- 安装后相关配置路径
+```
+/etc/systemd/system/xray.service
+/etc/systemd/system/xra
+/usr/local/bin/xray
+/usr/local/etc/x
+/usr/local/share/xray/geoip.dat
+/usr/local/share/xray/g
+/var/log/xray/access.log
+/var/log/xray/error.log
+```
+
+- 更新`geoip.dat` 和 `geosite.dat`
+```
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install-geodata
+```
+
+- 安装完毕后，`config.json`为`{}`，需要自己写配置，也可使用其它人写的，自行判断
+- 控制命令
+```
+systemctl start xray
+systemctl stop xray
+systemctl enable xray
+systemctl disable xray
+```
+
+## 配置示例
+```
+{
+    "inbound": {
+        "allocate": {
+            "strategy": "always"
+        },
+        "listen": "0.0.0.0",
+        "port": 8090,
+        "protocol": "vmess",
+        "settings": {
+            "clients": [
+                {
+                    "id" : "fbb68c3f-2e0b-4185-8263-f58282a64ffa",
+                    "alterId" : 0
+                }
+            ],
+            "udp": true
+        },
+        "sniffing": {
+            "destOverride": [
+                "http",
+                "tls"
+            ],
+            "enabled": true
+        },
+        "streamSettings": {
+            "network": "ws",
+            "security": "auto",
+            "wsSettings": {
+                "connectionReuse": true,
+                "path": "/v2ray/"
+            }
+        },
+        "tag": "proxy"
+    },
+    "log": {
+        "access": "/var/log/v2ray/access.log",
+        "error": "/var/log/v2ray/error.log",
+        "loglevel": "warning"
+    },
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "settings": {}
+        },
+        {
+            "tag": "stream",
+            "sendThrough": "0.0.0.0",
+            "protocol": "socks",
+            "settings": {
+                "servers": [
+                    {
+                        "address": "hk1.dnsunlock.com",
+                        "port": 8443,
+                        "users": []
+                    }
+                ]
+            }
+        }
+    ],
+    "routing": {
+        "domainStrategy": "AsIs",
+        "rules": [
+            {
+                "type": "field",
+                "domains": [
+                    "geosite:netflix"
+                ],
+                "outboundTag": "stream"
+            }
+        ]
+    }
+}
+```
+
 
 
 

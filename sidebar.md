@@ -1,6 +1,6 @@
 <!-- markdownlint-disable-next-line first-line-heading -->
 - [入门](README.md)
-- [解锁原理介绍](principle.md)
+- [开始](principle.md)
 - [服务条款](tos.md)
 - [解锁示例](v2ray.md)
 - [基于官方模版修改后示例](xray.md)
