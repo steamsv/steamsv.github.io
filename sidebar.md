@@ -2,8 +2,7 @@
 - [入门](README.md)
 - [开始](principle.md)
 - [服务条款](tos.md)
-- [解锁规则应用示例](v2ray.md)
-- [基于官方模版修改后示例](xray.md)
+- [解锁规则应用示例](xray.md)
 - **一些可能用到的在线工具**
 - [在线编辑JSON](https://www.jsontools.org/)
 - [文本去重](https://docs.dnsunlock.com/rule/)
