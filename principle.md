@@ -26,7 +26,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 /etc/systemd/system/xray.service
 /etc/systemd/system/xra
 /usr/local/bin/xray
-/usr/local/etc/x
+/usr/local/etc/xray/config.json
 /usr/local/share/xray/geoip.dat
 /usr/local/share/xray/g
 /var/log/xray/access.log
