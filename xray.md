@@ -4,6 +4,7 @@
 - 部分`*.dnsunlock.com`是动态IP，可能不支持热更新，可自行设置定时重载配置
 - 以下示例均可直接使用
 - 更多协议示例参考[github](https://github.com/steamsv/XTLS-Xray-examples)
+  * 需要重点关注的是`outbounds`跟`routing`，注意`inbound`要开启`sniffing`才能识别域名
 
 ### 只路由netflix
 
