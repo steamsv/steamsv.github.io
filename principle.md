@@ -1,30 +1,26 @@
-## 授权
-
+## 授权  
 - 本站所有产品都通过IP授权的方式来鉴权
 - 通过产品面板授权你的设备的出网公网IP
 
-
-## 查看要授权的IP
-
+## 查看要授权的IP  
 访问
 ```
 http://hk1.dnsunlock.com:9527/clientip
 ```
-
 - 会返回要授权的IP
 
-## 校验授权是否正确
-
+## 校验授权是否正确  
 - VPS上照搬执行，不需要改
 ```
 curl http://hk1.dnsunlock.com:9527/ip
 ```
-
 - 正确返回 `IP Whitelist` 错误返回 `IP Blacklist`
 
+## 解锁原理  
+- 依赖于`v2ray`及`xray`的出站路由，自行查看官方文档了解什么是`出站`
 
-## 安装v2ray及xray代理服务端
 
+## 安装v2ray及xray代理服务端  
 - 这里以xray为例
 - 安装
 ```
@@ -43,12 +39,14 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 /var/log/xray/error.log
 ```
 
-- 更新`geoip.dat` 和 `geosite.dat`
+## 更新`geoip.dat` 和 `geosite.dat`  
+- 这一步很重要，"routing"依赖此项，自行从官方文档了解如何使用
 ```
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install-geodata
 ```
 
-- 安装完毕后，`config.json`为`{}`，需要自己写配置，也可使用其它人写的，自行判断
+## 安装完毕后
+- `config.json`为`{}`，需要自己写配置，也可使用其它人写的，自行判断
 - 控制命令
 ```
 systemctl start xray
@@ -57,8 +55,7 @@ systemctl enable xray
 systemctl disable xray
 ```
 
-## 配置示例
-
+## 配置示例  
 - 以下可直接复制使用
 ```
 {
