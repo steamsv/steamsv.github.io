@@ -14,15 +14,6 @@
 - 会linux基本操作
 - 熟练运用`排除法`跟`举一反三`
 
-## v2ray及xray相关资料
-
-> xray兼容v2ray
-
-- [Xray Github](https://github.com/XTLS/Xray-core)
-- [V2ray Github](https://github.com/v2fly/v2ray-core)
-- [V2ray 文档1](https://www.v2fly.org/)
-- [V2ray 文档2](https://www.v2ray.org/)
-
 ## 特性
 
 - 提供原生`SOCKS5`连接 统一端口为`8443`，无账号密码认证
