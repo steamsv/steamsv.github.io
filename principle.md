@@ -3,7 +3,7 @@
 - 通过产品面板授权你的设备的出网公网IP
 
 ## 查看要授权的IP  
-访问
+在需要授权的设备上访问
 ```
 http://hk1.dnsunlock.com:9527/clientip
 ```
@@ -18,6 +18,15 @@ curl http://hk1.dnsunlock.com:9527/ip
 
 ## 解锁原理  
 - 依赖于`v2ray`及`xray`的出站路由，自行查看官方文档了解什么是`出站`
+
+### v2ray及xray相关资料
+
+> xray兼容v2ray
+
+- [Xray Github](https://github.com/XTLS/Xray-core)
+- [V2ray Github](https://github.com/v2fly/v2ray-core)
+- [V2ray 文档1](https://www.v2fly.org/)
+- [V2ray 文档2](https://www.v2ray.org/)
 
 
 ## 安装v2ray及xray代理服务端  
