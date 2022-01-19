@@ -5,14 +5,14 @@
 ## 查看要授权的IP  
 在需要授权的设备上访问
 ```
-http://hk1.dnsunlock.com:9527/clientip
+curl https://www.clientip.org
 ```
 - 会返回要授权的IP
 
-## 校验授权是否正确  
+## 校验授权是否正确  （暂无）
 - VPS上照搬执行，不需要改
 ```
-curl http://hk1.dnsunlock.com:9527/ip
+curl 
 ```
 - 正确返回 `IP Whitelist` 错误返回 `IP Blacklist`
 
