@@ -21,6 +21,23 @@
   - 台湾 x5
   - 日本 x1
 
+## 流媒体白名单
+- abc
+- bahamut
+- bamtech
+- bilibili
+- disney
+- espn
+- hulu
+- iqiyi
+- iqiyi-ads
+- marvel
+- mytvsuper
+- nationalgeographic
+- netflix
+- tvb
+
+
 ## 注意
 
 - 本站只提供`sniproxy`及`SOCKS5`接入服务，文档只提供部分示例，自行举一反三。
