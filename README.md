@@ -28,6 +28,7 @@
 - bilibili
 - disney
 - espn
+- hbo
 - hulu
 - iqiyi
 - iqiyi-ads
