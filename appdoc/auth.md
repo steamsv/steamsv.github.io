@@ -29,10 +29,15 @@ ipset create -exist whitev4 hash:net family inet hashsize 1024 maxelem 1000000 t
 - 修改`/etc/sysconfig/ipset-config` 中的`IPSET_SAVE_ON_STOP="yes"` 设置为YES
 
 
-### 第五步 端口白名单规则
+### 第五步 白名单规则
 
+端口
 ```
-iptables -I INPUT -m set --match-set whitev4 src -p tcp --destination-port 8443 -j ACCEPT
+-A INPUT -p tcp -m set --match-set whitev4 src -m tcp --dport 80 -j ACCEPT
+```
+ip
+```
+-A INPUT -s 1.1.1.1/32 -p tcp -m tcp --dport 80 -j ACCEPT
 ```
 
 ### 其它示例
