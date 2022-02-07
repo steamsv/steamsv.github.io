@@ -24,17 +24,9 @@ echo "net.ipv4.tcp_max_syn_backlog=2048" >> /etc/sysctl.conf
 echo "net.core.netdev_max_backlog=2048" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_tw_recycle=1" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_tw_reuse=1" >> /etc/sysctl.conf
-```
 
-2.
-
-```
 echo 2000500 > /proc/sys/fs/nr_open
-```
 
-3.
-
-```
 echo "* soft nproc 2000000" >> /etc/security/limits.conf
 echo "* hard nproc 2000000" >> /etc/security/limits.conf
 echo "* soft nofile 2000000" >> /etc/security/limits.conf
