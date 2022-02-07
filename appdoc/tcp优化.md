@@ -11,10 +11,10 @@ echo 2000500 > /proc/sys/fs/nr_open
 2.
 
 ```
-echo "* soft nproc 2000500" >> /etc/security/limits.conf
-echo "* hard nproc 2000500" >> /etc/security/limits.conf
-echo "* soft nofile 2000500" >> /etc/security/limits.conf
-echo "* hard nofile 2000500" >> /etc/security/limits.conf
+echo "* soft nproc 2000000" >> /etc/security/limits.conf
+echo "* hard nproc 2000000" >> /etc/security/limits.conf
+echo "* soft nofile 2000000" >> /etc/security/limits.conf
+echo "* hard nofile 2000000" >> /etc/security/limits.conf
 ```
 
 3.
