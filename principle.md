@@ -256,19 +256,10 @@ systemctl disable xray
         "error": "/var/log/v2ray/error.log",
         "loglevel": "warning"
     },
-    "outbound": {
-        "protocol": "freedom",
-        "settings": {}
-    },
-    "outboundDetour": [
+    "outbounds": [
         {
-            "protocol": "blackhole",
-            "settings": {
-                "response": {
-                    "type": "http"
-                }
-            },
-            "tag": "blocked"
+            "protocol": "freedom",
+            "settings": {}
         },
         {
             "tag": "stream",
