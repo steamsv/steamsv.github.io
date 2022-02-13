@@ -181,8 +181,8 @@ systemctl disable xray
         "tag": "proxy"
     },
     "log": {
-        "access": "/var/log/v2ray/access.log",
-        "error": "/var/log/v2ray/error.log",
+        "access": "/var/log/xray/access.log",
+        "error": "/var/log/xray/error.log",
         "loglevel": "warning"
     },
     "outbounds": [
@@ -243,8 +243,8 @@ systemctl disable xray
         "tag": "proxy"
     },
     "log": {
-        "access": "/var/log/v2ray/access.log",
-        "error": "/var/log/v2ray/error.log",
+        "access": "/var/log/xray/access.log",
+        "error": "/var/log/xray/error.log",
         "loglevel": "warning"
     },
     "outbounds": [
