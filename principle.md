@@ -189,20 +189,6 @@ systemctl disable xray
         {
             "protocol": "freedom",
             "settings": {}
-        },
-        {
-            "tag": "stream",
-            "sendThrough": "0.0.0.0",
-            "protocol": "socks",
-            "settings": {
-                "servers": [
-                    {
-                        "address": "hk1.dnsunlock.com",
-                        "port": 8443,
-                        "users": []
-                    }
-                ]
-            }
         }
     ],
     "routing": {
