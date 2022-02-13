@@ -185,19 +185,24 @@ systemctl disable xray
         "error": "/var/log/v2ray/error.log",
         "loglevel": "warning"
     },
-    "outbound": {
-        "protocol": "freedom",
-        "settings": {}
-    },
-    "outboundDetour": [
+    "outbounds": [
         {
-            "protocol": "blackhole",
+            "protocol": "freedom",
+            "settings": {}
+        },
+        {
+            "tag": "stream",
+            "sendThrough": "0.0.0.0",
+            "protocol": "socks",
             "settings": {
-                "response": {
-                    "type": "http"
-                }
-            },
-            "tag": "blocked"
+                "servers": [
+                    {
+                        "address": "hk1.dnsunlock.com",
+                        "port": 8443,
+                        "users": []
+                    }
+                ]
+            }
         }
     ],
     "routing": {
