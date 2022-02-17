@@ -1,6 +1,6 @@
 <!-- markdownlint-disable-next-line first-line-heading -->
 - [入门](README.md)
-- [尽量维护名单](netflix.md)
+- [严格限制名单](netflix.md)
 - [开始](principle.md)
 - [解锁规则应用示例](xray.md)
 - **一些可能用到的在线工具**
