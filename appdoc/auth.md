@@ -14,7 +14,7 @@ systemctl enable iptables  #开机启动
 ### 第二步 安装ipset并设置开机自启
 
 ```
-yum install ipset-service
+yum install ipset-service -y
 systemctl enable ipset
 ```
 

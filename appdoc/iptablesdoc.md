@@ -110,4 +110,15 @@ iptables -t nat -A OUTPUT -p udp -m udp --dport 53 -j DNAT --to-destination DNS
 
 ![](https://www.nicoimg.com/file/nicoimg/tcpdns.png)
 
+```
+iptables -t nat -A PREROUTING -p tcp --dport 10121 -j DNAT --to-destination 10.0.0.102:22
+iptables -t nat -A PREROUTING -p udp --dport 10121 -j DNAT --to-destination 10.0.0.102:22
+iptables -t nat -A POSTROUTING -p tcp -d 10.0.0.102 --dport 22 -j SNAT --to-source 10.0.0.1
+iptables -t nat -A POSTROUTING -p udp -d 10.0.0.102 --dport 22 -j SNAT --to-source 10.0.0.1
 
+
+iptables -t nat -A PREROUTING -p tcp -m tcp --dport 10122:10130 -j DNAT --to-destination 10.0.0.102
+iptables -t nat -A PREROUTING -p udp -m udp --dport 10122:10130 -j DNAT --to-destination 10.0.0.102
+iptables -t nat -A POSTROUTING -d 10.0.0.102 -p tcp -m tcp --dport 10122:10130 -j SNAT --to-source 10.0.0.1
+iptables -t nat -A POSTROUTING -d 10.0.0.102 -p udp -m udp --dport 10122:10130 -j SNAT --to-source 10.0.0.1
+```
