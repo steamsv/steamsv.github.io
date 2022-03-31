@@ -11,4 +11,5 @@
   - [动态IP VPS](vps/hinetvps.md)
   - [静态IP VPS](vps/cn2vps.md)
 - **Links**
-- [Github](https://github.com/steamsv/steamsv.github.io)
+- [TG群组](https://t.me/dnsunlock)
+- [官网](https://steamsv.com)
