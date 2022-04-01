@@ -122,3 +122,7 @@ iptables -t nat -A PREROUTING -p udp -m udp --dport 10122:10130 -j DNAT --to-des
 iptables -t nat -A POSTROUTING -d 10.0.0.102 -p tcp -m tcp --dport 10122:10130 -j SNAT --to-source 10.0.0.1
 iptables -t nat -A POSTROUTING -d 10.0.0.102 -p udp -m udp --dport 10122:10130 -j SNAT --to-source 10.0.0.1
 ```
+```
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 15000:15004 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 15000:15004 -j ACCEPT
+```
