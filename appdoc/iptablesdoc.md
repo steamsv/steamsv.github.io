@@ -126,3 +126,9 @@ iptables -t nat -A POSTROUTING -d 10.0.0.102 -p udp -m udp --dport 10122:10130 -
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 15000:15004 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 15000:15004 -j ACCEPT
 ```
+
+
+ ```
+iptables -A OUTPUT -p tcp -m set --match-set whitev4 dst -m hashlimit --hashlimit-name limitDownLink --hashlimit-upto 5000kb/s --hashlimit-mode dstip --hashlimit-burst 6000kb -j ACCEPT
+iptables -A OUTPUT -p tcp -m set --match-set whitev4 dst -j DROP
+```
