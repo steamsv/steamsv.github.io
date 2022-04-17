@@ -16,5 +16,7 @@
 [服务条款](tos.md)
 
 - **Links**
-- [TG群组](https://t.me/dnsunlock)
 - [官网](https://steamsv.com)
+- [TG群组](https://t.me/dnsunlock)
+- [站长Blog](https://blog.steamsv.com)
+
