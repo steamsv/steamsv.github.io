@@ -34,4 +34,4 @@ chmod +x /usr/bin/brook
 
 ## 定时任务
 
-*/5 * * * * /usr/bin/ddns -c /etc/ddns/config.json
+`*/5 * * * * /usr/bin/ddns -c /etc/ddns/config.json`
