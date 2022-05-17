@@ -12,6 +12,9 @@
   - [动态IP VPS](vps/hinetvps.md)
   - [静态IP VPS](vps/cn2vps.md)
 
+- **相关技术文档**
+- [DDNS](ddns.md)
+
 - **TOS**
 [服务条款](tos.md)
 
