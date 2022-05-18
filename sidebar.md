@@ -14,6 +14,7 @@
 
 - **相关技术文档**
 - [DDNS](ddns.md)
+- [VNC](vnc.md)
 
 - **TOS**
 [服务条款](tos.md)
