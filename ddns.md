@@ -1,7 +1,7 @@
 ## 安装
 ```
 curl -L https://github.com/steamsv/ddns-cf/raw/main/ddns -o /usr/bin/ddns
-chmod +x /usr/bin/brook
+chmod +x /usr/bin/ddns
 ```
 
 ## 配置
