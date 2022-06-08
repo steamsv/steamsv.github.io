@@ -23,3 +23,8 @@ bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/
 systemctl start v2ray
 systemctl enable v2ray
 ```
+
+```
+systemctl stop v2ray
+systemctl disable v2ray
+```
