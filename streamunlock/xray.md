@@ -237,3 +237,93 @@
     }
 }
 ```
+
+### X-UI 示例
+
+```
+{
+    "api": {
+        "services": [
+            "HandlerService",
+            "LoggerService",
+            "StatsService"
+        ],
+        "tag": "api"
+    },
+    "inbounds": [
+        {
+            "listen": "127.0.0.1",
+            "port": 62789,
+            "protocol": "dokodemo-door",
+            "settings": {
+                "address": "127.0.0.1"
+            },
+            "tag": "api"
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "settings": {}
+        },
+        {
+            "protocol": "blackhole",
+            "settings": {},
+            "tag": "blocked"
+        },
+        {
+            "tag": "stream",
+            "sendThrough": "0.0.0.0",
+            "protocol": "socks",
+            "settings": {
+                "servers": [
+                    {
+                        "address": "hk1.dnsunlock.com",
+                        "port": 8443,
+                        "users": []
+                    }
+                ]
+            }
+        }
+    ],
+    "policy": {
+        "system": {
+            "statsInboundDownlink": true,
+            "statsInboundUplink": true
+        }
+    },
+    "routing": {
+        "rules": [
+            {
+                "inboundTag": [
+                    "api"
+                ],
+                "outboundTag": "api",
+                "type": "field"
+            },
+            {
+                "ip": [
+                    "geoip:private"
+                ],
+                "outboundTag": "blocked",
+                "type": "field"
+            },
+            {
+                "outboundTag": "blocked",
+                "protocol": [
+                    "bittorrent"
+                ],
+                "type": "field"
+            },
+            {
+                "type": "field",
+                "domains": [
+                    "geosite:netflix"
+                ],
+                "outboundTag": "stream"
+            }
+        ]
+    },
+    "stats": {}
+}
+```
