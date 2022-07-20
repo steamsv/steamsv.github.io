@@ -1,5 +1,12 @@
 {
     "title": "STEAMSV DOCS",
     "language":"zh-hans",
-    "plugins" : [ "code" ]
+    "plugins" : [ 
+        "code",
+        "-lunr", 
+        "-search", 
+        "search-pro",
+        "back-to-top-button",
+        "pageview-count"
+    ]
 }
