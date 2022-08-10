@@ -6,7 +6,8 @@
     * [入门](kaishi.md)
     * [严格限制名单](netflix.md)
     * [开始](principle.md)
-    * [解锁规则应用示例](xray.md)
+    * [解锁规则应用示例 S5](xray.md)
+    * [解锁规则应用示例 SS](xrayss.md)
 
 * 台湾VPS服务
     * [NAT VPS](natvps.md)
