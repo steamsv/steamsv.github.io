@@ -56,13 +56,14 @@
         {
             "tag": "stream",
             "sendThrough": "0.0.0.0",
-            "protocol": "socks",
+            "protocol": "shadowsocks",
             "settings": {
                 "servers": [
                     {
-                        "address": "hk1.dnsunlock.com",
-                        "port": 8443,
-                        "users": []
+                        "address": "127.0.0.1",
+                        "port": 1234,
+                        "method": "aes-256-gcm",
+                        "password": "123456789",
                     }
                 ]
             }
@@ -133,13 +134,14 @@
         {
             "tag": "stream",
             "sendThrough": "0.0.0.0",
-            "protocol": "socks",
+            "protocol": "shadowsocks",
             "settings": {
                 "servers": [
                     {
-                        "address": "hk1.dnsunlock.com",
-                        "port": 8443,
-                        "users": []
+                        "address": "127.0.0.1",
+                        "port": 1234,
+                        "method": "aes-256-gcm",
+                        "password": "123456789",
                     }
                 ]
             }
@@ -210,13 +212,14 @@
         {
             "tag": "stream",
             "sendThrough": "0.0.0.0",
-            "protocol": "socks",
+            "protocol": "shadowsocks",
             "settings": {
                 "servers": [
                     {
-                        "address": "hk1.dnsunlock.com",
-                        "port": 8443,
-                        "users": []
+                        "address": "127.0.0.1",
+                        "port": 1234,
+                        "method": "aes-256-gcm",
+                        "password": "123456789",
                     }
                 ]
             }
@@ -274,13 +277,14 @@
         {
             "tag": "stream",
             "sendThrough": "0.0.0.0",
-            "protocol": "socks",
+            "protocol": "shadowsocks",
             "settings": {
                 "servers": [
                     {
-                        "address": "hk1.dnsunlock.com",
-                        "port": 8443,
-                        "users": []
+                        "address": "127.0.0.1",
+                        "port": 1234,
+                        "method": "aes-256-gcm",
+                        "password": "123456789",
                     }
                 ]
             }
