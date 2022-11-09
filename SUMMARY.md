@@ -8,6 +8,7 @@
     * [开始](principle.md)
     * [解锁规则应用示例 S5](xray.md)
     * [解锁规则应用示例 SS](xrayss.md)
+    * [检测节点是否正常 S5](curl.md)
 
 * 台湾VPS服务
     * [NAT VPS](natvps.md)
