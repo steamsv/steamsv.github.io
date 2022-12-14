@@ -17,5 +17,4 @@
 
 * 相关技术文档
     * [DDNS](ddns.md)
-    * [VNC](vnc.md)
 
